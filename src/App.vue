@@ -1,0 +1,25 @@
+<template>
+  <Sekel_task msg="Welcome to Your Vue.js App"/>
+</template>
+
+<script>
+import Sekel_task from './components/Sekel_task.vue'
+
+export default {
+  name: 'App',
+  components: {
+    Sekel_task
+  }
+}
+</script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
