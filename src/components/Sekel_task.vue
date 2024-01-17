@@ -19,7 +19,7 @@
             <td>{{ item.body }}</td>
             <td>{{ item.userId }}</td>
             <td>
-              <button @click="loadComments(item.id)" class="btn btn-success">
+              <button @click="getComments(item.id)" class="btn btn-success">
                 Comments
               </button>
             </td>
@@ -39,7 +39,6 @@
           <div><strong>Body:</strong> {{ comment.body }}</div>
           <div><strong>User ID:</strong> {{ comment.user.id }}</div>
           <div><strong>Username:</strong> {{ comment.user.username }}</div>
-          <hr class="my-2" />
         </li>
       </ul>
     </div>
@@ -69,7 +68,7 @@ export default {
           console.error(error);
         });
     },
-    loadComments(postId) {
+    getComments(postId) {
       axios
         .get(`https://dummyjson.com/posts/${postId}/comments`)
         .then((response) => {
@@ -158,7 +157,4 @@ button:hover {
   border-radius: 4px;
 }
 
-hr {
-  border-color: #007bff;
-}
 </style>
